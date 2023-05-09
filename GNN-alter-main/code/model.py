@@ -40,13 +40,13 @@ class SE_GNN(nn.Module):
 
         #self.predictor = ConvE(h_dim, out_channels=self.cfg.out_channel, ker_sz=self.cfg.ker_sz)
         # loss
-        self.bce = nn.BCELoss()
+        #self.bce = nn.BCELoss()
         self.predictor = DeepE(14541)
         # self.predictor.init()
         # self.predictor = ConvE(h_dim, out_channels=self.cfg.out_channel, ker_sz=self.cfg.ker_sz)
         # loss
         # self.bce = nn.BCEWithLogitsLoss()
-        # self.bce= nn.CrossEntropyLoss()
+        self.bce= nn.CrossEntropyLoss()
 
         self.ent_drop = nn.Dropout(self.cfg.ent_drop)
         self.rel_drop = nn.Dropout(self.cfg.rel_drop)

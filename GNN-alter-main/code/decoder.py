@@ -219,7 +219,7 @@ class DeepE(torch.nn.Module):
         # x:Tensor(2,450),all_ent.transpose:Tensor(450,14541)------>Tensor(2,14541)
         x = torch.mm(x, all_ent.transpose(1, 0))  # (bs, n_ent)
 
-        x=torch.sigmoid(x)
+
 
         return x
 
