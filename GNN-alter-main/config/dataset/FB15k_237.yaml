@@ -6,7 +6,7 @@ epoch: 600
 # 云平台
 batch_size: 1024
 learning_rate: 3.5e-4
-h_dim: 450
+h_dim: 768
 pred_rel_w: False
 label_smooth: 0.1
 
@@ -19,8 +19,8 @@ comp_op: mul   # add/mul
 bn: False  # batchnorn
 
 # ConvE
-k_h: 15
-k_w: 30
+k_h: 24
+k_w: 32
 conv_drop: 0.3
 ent_drop_pred: 0.3
 fc_drop: 0.5
