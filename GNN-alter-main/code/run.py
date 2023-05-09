@@ -78,6 +78,7 @@ def format_metrics(name, h_metric, t_metric):
 
 @hydra.main(version_base=None,config_path=join('..', 'config'), config_name="config")
 def main(config: DictConfig):
+    logging.info("方案4")
     utils.set_global_config(config)
     cfg = utils.get_global_config()
     assert cfg.dataset in cfg.dataset_list
