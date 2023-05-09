@@ -13,7 +13,7 @@ warmup_epoch: 5
 # project directory
 # 云平台：/gemini/code
 # project_dir: C:\Users\admin\Desktop\论文\知识推理\code\SE-GNN-main\SE-GNN-main
-project_dir: /gemini/code
+project_dir: /gemini/code/GNN-alter-main
 # dataset directory
 dataset_dir: ${project_dir}/data/dataset
 # output directory for each dataset
