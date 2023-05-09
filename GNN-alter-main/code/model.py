@@ -5,7 +5,7 @@ import dgl
 import dgl.function as fn
 import utils
 from utils import get_param
-from decoder import ConvE
+from decoder import ConvE, DeepE
 
 
 class SE_GNN(nn.Module):
@@ -38,9 +38,15 @@ class SE_GNN(nn.Module):
         else:
             self.pred_rel_emb = get_param(self.n_rel * 2, h_dim)
 
-        self.predictor = ConvE(h_dim, out_channels=self.cfg.out_channel, ker_sz=self.cfg.ker_sz)
+        #self.predictor = ConvE(h_dim, out_channels=self.cfg.out_channel, ker_sz=self.cfg.ker_sz)
         # loss
         self.bce = nn.BCELoss()
+        self.predictor = DeepE(14541)
+        # self.predictor.init()
+        # self.predictor = ConvE(h_dim, out_channels=self.cfg.out_channel, ker_sz=self.cfg.ker_sz)
+        # loss
+        # self.bce = nn.BCEWithLogitsLoss()
+        # self.bce= nn.CrossEntropyLoss()
 
         self.ent_drop = nn.Dropout(self.cfg.ent_drop)
         self.rel_drop = nn.Dropout(self.cfg.rel_drop)
