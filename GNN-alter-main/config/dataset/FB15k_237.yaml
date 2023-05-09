@@ -6,7 +6,7 @@ epoch: 600
 # 云平台
 batch_size: 1024
 learning_rate: 3.5e-4
-h_dim: 300
+h_dim: 450
 pred_rel_w: False
 label_smooth: 0.1
 
