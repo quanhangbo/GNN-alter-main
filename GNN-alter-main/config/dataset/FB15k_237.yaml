@@ -19,7 +19,7 @@ comp_op: mul   # add/mul
 bn: False  # batchnorn
 
 # ConvE
-k_h: 30
+k_h: 15
 k_w: 30
 conv_drop: 0.3
 ent_drop_pred: 0.3
