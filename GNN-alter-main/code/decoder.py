@@ -154,7 +154,7 @@ class ResNetBlock(torch.nn.Module):
 
 
 class DeepE(torch.nn.Module):
-    def __init__(self, num_emb, embedding_dim=450, hidden_drop=0.4, num_source_layers=20, num_target_layers=1,
+    def __init__(self, num_emb, embedding_dim=450, hidden_drop=0.4, num_source_layers=10, num_target_layers=1,
                  input_drop=0.4, inner_layers=3, target_drop=0.4, identity_drop=0.01):
         super(DeepE, self).__init__()
         cfg = utils.get_global_config()
